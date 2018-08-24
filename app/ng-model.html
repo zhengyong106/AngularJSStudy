@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <title>{{name}}</title>
+        <meta charset="UTF-8">
+        <script src="js/angular-1.5.8/angular.js"></script>
+    </head>
+    <body>
+        <h1>{{name}}</h1>
+        <label for="name">rootScope双向绑定</label>
+        <input type="text" ng-model="name" id="name">
+        <div ng-controller="MyController">
+            <table>
+                <tr>
+                    <td>控制器属性: </td>
+                    <td>{{name}}</td>
+                </tr>
+                <tr>
+                    <td>控制器属性(字典): </td>
+                    <td>{{dict}}</td>
+                </tr>
+                <tr>
+                    <td>控制器属性(数组): </td>
+                    <td>{{list}}</td>
+                </tr>
+                <tr>
+                    <td>控制器方法: </td>
+                    <td>{{sayHello()}}</td>
+                </tr>
+                <tr>
+                    <td>控制器遍历: </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <th>姓名</th>
+                                <th>国家</th>
+                            </tr>
+                            <tr ng-repeat="item in list">
+                                <td>{{item.name}}</td>
+                                <td>{{item.country}}</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+    <script src="ng-model.js"></script>
+</html>

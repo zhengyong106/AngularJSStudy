@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/angular-1.5.8/angular.js"></script>
+</head>
+<body>
+    <ul ng-controller="ParentController">
+        <li>
+            <p>Parent scope：count = {{count}}</p>
+        </li>
+
+        <ul ng-controller="OneselfController">
+            <li>
+                <p>Oneself scope：count = {{count}}</p>
+                <button ng-click="$emit('myEvent')">点我向上级传递事件</button>
+                <button ng-click="$broadcast('myEvent')">点我向下级传递事件</button>
+                <button ng-click="click()">点我</button>
+            </li>
+
+            <ul ng-repeat="i in [1, 2]" ng-controller="ChildController">
+                <li>
+                    <p>Child scope：count = {{count}}</p>
+                </li>
+            </ul>
+        </ul>
+    </ul>
+    <script src="ng-event.js"></script>
+</body>
+</html>

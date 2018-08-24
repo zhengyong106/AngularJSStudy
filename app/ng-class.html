@@ -1,0 +1,56 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body ng-controller="myController">
+    <div class="panel" ng-class="'panel-'+theme">
+        <div class="panel-heading">
+            <div class="panel-titl">实例</div>
+        </div>
+        <div class="panel-body">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="inputemail3" class="col-sm-2 control-label">email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="inputemail3" placeholder="email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputpassword3" class="col-sm-2 control-label">password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputpassword3" placeholder="password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> remember me
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">sign in</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="panel-footer">
+            <div class="form form-horizontal">
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button class="btn btn-default" ng-click="switchTheme()">switch theme</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/angular-1.5.8/angular.js" type="text/javascript"></script>
+    <script src="ng-class.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="factoryApp">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="css/bootstrap.js"></script>
+    <script type="text/javascript" src="js/angular-1.5.8/angular.js"></script>
+    <script type="text/javascript" src="ng-factory.js"></script>
+</head>
+<body>
+    <div class="panel panel-default" ng-controller="factoryController">
+        <div class="panel-head">
+            <div class="input-group">
+                <label for="username" class="input-group-addon">username</label>
+                <input type="text" class="form-control" id="username" ng-model="username">
+            </div>
+        </div>
+        <div class="panel-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr ng-show="users">
+                        <th>#</th>
+                        <th>name</th>
+                        <th>age</th>
+                        <th>email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="user in users">
+                        <th ng-bind="user.index"></th>
+                        <td ng-bind="user.name"></td>
+                        <td ng-bind="user.age"></td>
+                        <td ng-bind="user.email"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

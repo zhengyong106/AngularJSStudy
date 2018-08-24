@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script type="text/javascript" src="js/angular-1.5.8/angular.js"></script>
+    <script type="text/javascript" src="ng-directive-scope.js"></script>
+</head>
+<body>
+    <div class="col-xs-6" ng-controller="myController">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <p class="panel-title text-center">使用 @ 隔离 scope 属性</p>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-4">
+                        Controller scope
+                    </div>
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control" ng-model="liquor">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-4">
+                        Directive scope
+                    </div>
+                    <div class="col-xs-8">
+                        <liquor-a name="{{liquor}}"></liquor-a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <p class="panel-title text-center">使用 = 隔离 scope 属性</p>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-4">
+                        Controller scope
+                    </div>
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control" ng-model="liquor">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-4">
+                        Directive scope
+                    </div>
+                    <div class="col-xs-8">
+                        <!--注意这里，因为是双向绑定，所以这里不要“{{}}”这个符号-->
+                        <liquor-b name="liquor"></liquor-b>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <p class="panel-title text-center">使用 & 隔离 scope 属性</p>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-4">
+                        Controller scope
+                    </div>
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control" ng-model="liquor">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-4">
+                        Directive scope
+                    </div>
+                    <div class="col-xs-8">
+                        <liquor-c get-liquor="liquor"></liquor-c>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

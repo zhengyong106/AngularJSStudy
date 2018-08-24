@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/angular-1.5.8/angular.js"></script>
+</head>
+<body>
+    <div ng-controller="myController" ng-init="hidden = false">
+        <button ng-click="hidden = !hidden">显示/隐藏</button>
+        <p ng-hide="hidden">
+            <label>姓：</label><input type="text" ng-model="firstName = 'Jone'"><br>
+            <label>名：</label><input type="text" ng-model="lastName = 'Doe'"><br>
+            姓名: {{firstName + " " + lastName}}
+        </p>
+    </div>
+    <script src="ng-show.js"></script>
+</body>
+</html>

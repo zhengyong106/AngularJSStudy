@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="css/bootstrap.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-default">
+        <div class="">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#/home">Home</a>
+                </li>
+                <li>
+                    <a href="#/computer">Computer</a>
+                </li>
+                <li>
+                    <a href="#/printer">Printer</a>
+                </li>
+                <li class="dropdown-menu-right">
+                    <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Other <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li>
+                            <a href="#/pthoe">Phone</a>
+                        </li>
+                        <li>
+                            <a href="#/television">Television</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <h2 class="{{textColor}}" ng-view></h2>
+    <script type="text/javascript" src="js/angular-1.5.8/angular.js"></script>
+    <script type="text/javascript" src="js/angular-1.5.8/angular-route.js"></script>
+    <script type="text/javascript" src="ng-router.js"></script>
+</body>
+</html>
